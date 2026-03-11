@@ -9,10 +9,11 @@
 </head>
 
 <body>
-
+    <!-- nav bar -->
     <header class="header">
         <div class="header__logo">
             <img src="Logo.png" alt="LUM.UR">
+            <p class="header__soustitre">Lunière Urbaine</p>
         </div>
 
         <nav class="header__nav">
@@ -29,6 +30,7 @@
         <button class="header__btn">Obtenez vos billets </button>
     </header>
 
+    <!-- hero -->
     <section class="hero">
         <img class="hero__bg" src="arrière-plan.jpg" alt="arriere-plan couleurs cercels">
         <div class="hero__container">
@@ -41,44 +43,94 @@
         </div>
     </section>
 
+
+
     <section class="programmation">
         <h2 class="programmation__title">programmation</h2>
-        <div class="programmation__grid">
+        <div class="programmation__cards">
 
+
+            <!-- carte 1-->
             <article class="card">
                 <div class="card__image">
-                    <div class="card__tag">Jour 1</div>
+                    <span class="card__tag">Jour 1</span>
                 </div>
-                <div class="card__body">
+                <div class="card__text">
                     <h3 class="card__title">Vendredi</h3>
                     <p class="card__description">Liste des performances du vendredi</p>
                 </div>
             </article>
 
+            <!-- carte 2 -->
             <article class="card">
                 <div class="card__image">
-                    <div class="card__tag">Jour 2</div>
+                    <span class="card__tag">Jour 2</span>
                 </div>
-                <div class="card__body">
+                <div class="card__text">
                     <h3 class="card__title">Samedi</h3>
                     <p class="card__description">Liste des performances du samedi</p>
                 </div>
             </article>
 
 
+
+
+            <!-- carte 3 -->
             <article class="card">
                 <div class="card__image">
-                    <div class="card__tag">Jour 3</div>
+                    <span class="card__tag">Jour 3</span>
                 </div>
-                <div class="card__body">
+                <div class="card__text">
                     <h3 class="card__title">Dimanche</h3>
                     <p class="card__description">Liste des performances du dimanche</p>
+
                 </div>
             </article>
 
         </div>
     </section>
 
+
+    <!-- Horaire -->
+    <section class="horaire">
+        <div class="horaire__text">
+            <h2 class="horaire__title">Horaire</h2>
+            <p class="horaire__subtitle">Consultez notre horaire des performances.</p>
+        </div>
+
+        <div class="horaire__cards">
+
+            <article class="card__horaire">
+                <img src="calendar_today.png" alt="calendar vendredi">
+                <div class="card__horaire__text">
+                    <p class="card__horaire__title">Vendredi</p>
+                    <p class="card__horaire__description">Performances de 15h à 23h</p>
+
+                </div>
+            </article>
+
+            <article class="card__horaire">
+                <img src="calendar_samedi.png" alt="calendar samdei">
+                <div class="card__horaire__text">
+                    <p class="card__horaire__title">Samedi</p>
+                    <p class="card__horaire__description">Performances de 12h à 23h</p>
+
+                </div>
+            </article>
+
+
+            <article class="card__horaire">
+                <img src="calendar_dimanche.png" alt="calendar dimanche">
+                <div class="card__horaire__text">
+                    <p class="card__horaire__title">Dimanche</p>
+                    <p class="card__horaire__description">Performances de 12h à 21h</p>
+
+                </div>
+            </article>
+
+
+        </div>
+    </section>
 
 
 

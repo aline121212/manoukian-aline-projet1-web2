@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
@@ -41,6 +42,7 @@ body {
     background-color: var(--color-bg-dark);
     align-items: center;
     padding: 10px 60px;
+    flex-direction: row;
     justify-content: space-between;
     align-self: stretch;
     height: var(--space-2xl);
@@ -49,17 +51,29 @@ body {
 
 .header__logo {
     color: var(--color-secondary);
-    text-shadow: 0 0 6.2px rgba(255, 255, 255, 0.73);
-    font-style: normal;
-    line-height: 22px;
+    font-weight: bold;
+    align-self: flex-start;
+    line-height: var(--space-sm);
+    flex-direction: column;
+    letter-spacing: var(--space-2xl);
+    font-size: var(--font-size-base);
+}
+
+.header__soustitre {
+    text-align: center;
+    letter-spacing: 0.54px;
 }
 
 .header__nav {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
 .header__list {
     display: flex;
+    flex-direction: row;
     list-style: none;
     gap: var(--space-lg);
     text-decoration: none;
@@ -78,7 +92,18 @@ body {
     font-size: var(--font-size-sm);
     padding: var(--font-size-sm) var(--space-md);
     display: flex;
+    border-radius: 5px;
+    flex-direction: row;
+}
 
+.hero {
+    position: relative;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    display: flex;
+    overflow: hidden;
+    padding: var(--space-xl) var(--space-2xl);
+    min-height: 600px;
 
 }
 
@@ -93,16 +118,6 @@ body {
     align-items: flex-start;
     flex: 1 0 0;
 }
-
-.hero {
-    position: relative;
-    align-items: center;
-    display: flex;
-    overflow: hidden;
-    padding: var(--space-xl) var(--space-2xl);
-    min-height: 600px;
-}
-
 
 .hero__bg {
     position: absolute;
@@ -122,6 +137,9 @@ body {
     text-shadow: 0 0 5.7px #06D6A0, 0 0 33.9px #06D6A0;
     font-style: normal;
     line-height: var(--space-xl);
+    align-self: stretch;
+    font-weight: 1;
+
 }
 
 .hero__subtitle {
@@ -130,16 +148,15 @@ body {
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 48px;
+    line-height: var(--space-xl);
 
 }
 
 .hero__btn {
     display: flex;
-    align-items: flex-start;
     align-content: center;
     gap: var(--space-md);
-    flex-wrap: wrap;
+
 }
 
 .hero__btn--outline {
@@ -187,6 +204,11 @@ body {
     align-items: center;
     border-radius: 6px;
     border: 1px solid rgba(0, 0, 0, 0.10);
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+
+
 }
 
 .card__tag {
@@ -204,8 +226,51 @@ body {
 
 }
 
+
 .card__image {
     flex: 1 0 0;
     align-self: stretch;
+}
 
+
+.card__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.programmation__title {
+    font-family: var(--font-logo);
+    font-weight: 1;
+    text-align: center;
+    font-size: var(--space-xl);
+    color: var(--color-bg-dark);
+
+}
+
+.card__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+
+}
+
+.horaire {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    padding: 10px 60px;
+    justify-content: space-between;
+    align-self: stretch;
+    height: var(--space-2xl);
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2xl);
+
+
+
+}
+
+.horaire__title {
+    font-family: Roboto;
 }
