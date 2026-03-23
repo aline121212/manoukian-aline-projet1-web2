@@ -33,9 +33,45 @@
     box-sizing: border-box;
 }
 
+section {
+    padding: var(--space-2xl) 60px;
+}
+
+h2 {
+    letter-spacing: 2px;
+}
+
 body {
     font-family: var(--font-display);
 }
+
+
+/**   Header - Barre de navigation principale
+ 
+  Utilisation :
+  <header class="header">
+    <div class="header__logo">...</div>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li><a class="header__item">...</a></li>
+     </ul>
+    </nav>
+    <button class="header__btn">...</button>
+  </header>
+ 
+  Éléments :
+  header__logo      : Logo et sous-titre à gauche
+  header__soustitre : Sous-titre sous le logo
+  header__nav       : Conteneur de navigation
+  header__list      : Liste des liens de navigation
+  header__item      : Lien individuel
+  header__btn       : Bouton CTA à droite
+ 
+ Variantes :
+  Aucune
+ */
+
+
 
 .header {
     display: flex;
@@ -57,6 +93,7 @@ body {
     flex-direction: column;
     letter-spacing: var(--space-2xl);
     font-size: var(--font-size-base);
+    letter-spacing: 2px;
 }
 
 .header__soustitre {
@@ -96,6 +133,35 @@ body {
     flex-direction: row;
 }
 
+
+/** Hero - Section principale d'introduction
+ 
+  Utilisation :
+  <section class="hero">
+    <img class="hero__bg" />
+    <div class="hero__container">
+     <h1 class="hero__title">...</h1>
+    <p class="hero__subtitle">...</p>
+      <div class="hero__btns">
+        <button class="hero__btn hero__btn--outline">...</button>
+       <button class="hero__btn hero__btn--fill">...</button>
+     </div>
+   </div>
+  </section>
+ 
+  Éléments :
+  hero__bg        : Image de fond plein écran
+  hero__container : Contenu texte par-dessus l'image
+  hero__title     : Titre principal
+  hero__subtitle  : Sous-titre
+  hero__btns      : Conteneur des deux boutons
+ 
+  Variantes :
+  hero__btn--outline : Bouton transparent avec bordure
+  hero__btn--fill    : Bouton plein couleur primaire
+ */
+
+
 .hero {
     position: relative;
     gap: var(--space-lg);
@@ -110,7 +176,7 @@ body {
 .hero__container {
     position: relative;
     max-width: 500px;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     padding-top: var(--space-2xl);
     flex-direction: column;
@@ -159,6 +225,16 @@ body {
 
 }
 
+.horaire__cards {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.hero__btns {
+    display: flex;
+    gap: var(--space-md);
+}
+
 .hero__btn--outline {
     border-radius: var(--space-sm);
     border: 1px solid var(--color-hero);
@@ -202,11 +278,14 @@ body {
     background: rgba(217, 217, 217, 0.50);
     display: flex;
     align-items: center;
-    border-radius: 6px;
+    border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.10);
-    width: 360px;
-    height: 360px;
+    width: 300px;
     overflow: hidden;
+    justify-content: flex-end;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
 
 
 }
@@ -237,40 +316,781 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: var(--space-sm);
 }
+
+
+
+
+/** Programmation - Grille de cartes de programmation
+ 
+  Utilisation :
+  <section class="programmation">
+    <h2 class="programmation__title">...</h2>
+    <div class="programmation__grid">
+      <article class="prog-card">
+        <span class="prog-card__tag">Jour 1</span>
+        <div class="prog-card__image">
+          <p class="prog-card__placeholder">...</p>
+        </div>
+      <div class="prog-card__content">...</div>
+     </article>
+   </div>
+  </section>
+ 
+  Éléments :
+  programmation__title    : Titre de la section
+  programmation__grid     : Grille flex des cartes
+  prog-card__tag          : Badge "Jour X" dans le coin
+  prog-card__image        : Zone image grise
+  prog-card__placeholder  : Texte centré dans l'image
+  prog-card__content      : Titre et description
+ 
+  Variantes :
+  Aucune
+ */
+
+.programmation {
+    padding: 80px 60px;
+    text-align: center;
+
+}
+
 
 .programmation__title {
     font-family: var(--font-logo);
     font-weight: 1;
-    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
     font-size: var(--space-xl);
     color: var(--color-bg-dark);
 
 }
 
-.card__description {
-    font-size: 1rem;
-    line-height: 1.6;
+.programmation__grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.prog-card {
+    overflow: hidden;
+    width: 350px;
+    height: 440px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    position: relative;
+    border-radius: 0 10px 10px 10px;
+
+}
+
+.prog-card__content {
+    padding: 15px;
+    text-align: left;
+}
+
+.prog-card__tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 8px;
+    background: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    z-index: 1;
+    border-radius: 0 0 6px 0;
+
+}
+
+.prog-card__image {
+    height: 340px;
+    background: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prog-card__placeholder {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+}
+
+.prog-card__content {
+    padding: 15px;
+    text-align: left;
+}
+
+
+.prog-card__content h3 {
+    color: var(--color-text);
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.prog-card__content p {
+    color: var(--color-primary);
+    font-size: 16px;
+    line-height: 24px;
+
+}
+
+
+
+/**
+ * Horaire - Section des horaires du festival
+ 
+  Utilisation :
+  <section class="horaire">
+    <div class="horaire__container">
+      <div class="horaire__left">...</div>
+      <div class="horaire__right">
+        <div class="horaire-card">
+          <img class="icon" />
+         <div>
+            <strong class="horaire__semaine">...</strong>
+            <p class="horaire__time">...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+ Éléments :
+  horaire__container : Flex container gauche/droite
+  horaire__left      : Titre et sous-titre
+  horaire__soustitre : Sous-titre
+  horaire__right     : Colonne de cartes horaire
+  horaire-card       : Carte individuelle avec icône
+  horaire__semaine   : Nom du jour
+  horaire__time      : Heures de performance
+  icon               : Icône calendrier
+ 
+  Variantes :
+  Aucune
+ */
+
+
+.horaire {
+    background: var(--color-primary);
+    padding: 80px 60px;
+
+}
+
+.horaire__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+
+.horaire__left {
+    color: #000;
+    font-size: 16px;
+    max-width: 250px;
+    line-height: 24px;
+}
+
+.horaire__soustitre {
+    width: 350px;
+    padding-top: 13px;
+    align-self: stretch;
+}
+
+
+.horaire__left h2 {
+    color: #000;
+    font-weight: 1;
+    font-size: 35px;
+    font-family: var(--font-logo);
+    margin-bottom: 10px;
+
+}
+
+
+.horaire__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+
+.horaire-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f1f1f1;
+    padding: 15px 20px;
+    width: 546px;
+    height: 132px;
+}
+
+.horaire__time {
+    color: var(--color-primary);
+
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    background: #D0DBEB;
+    border-radius: 6px;
+    padding: 6px;
+
+}
+
+.horaire__semaine {
+    font-size: 20px;
+    line-height: 30px;
     color: var(--color-text);
 
 }
 
-.horaire {
-    background-color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    padding: 10px 60px;
-    justify-content: space-between;
-    align-self: stretch;
-    height: var(--space-2xl);
-    display: flex;
-    justify-content: center;
-    gap: var(--space-2xl);
 
-
+/**
+ * Artistes - Grille de cartes d'artistes
+ 
+  Utilisation :
+  <section class="artistes">
+    <h2 class="section-title">...</h2>
+    <div class="artistes__grid">
+      <div class="artiste-card artiste-card--featured">
+        <span class="artiste-card__tag">En vedette</span>
+        <div class="artiste-card__image">...</div>
+        <div class="artiste-card__body">
+          <strong class="artist__artist">...</strong>
+          <p class="artist__genre">...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  Éléments :
+  artiste-card__tag   : Badge dans le coin supérieur gauche
+  artiste-card__image : Zone image de l'artiste
+  artiste-card__body  : Nom et genre
+  artist__artist      : Nom de l'artiste
+  artist__genre       : Genre musical
+ 
+  Variantes :
+  artiste-card--featured : Bordure dorée pour l'artiste en vedette
+ */
+.artistes {
+    padding: 80px 60px;
+    text-align: center;
+    font-family: var(--font-display);
 
 }
 
-.horaire__title {
-    font-family: Roboto;
+.section-title {
+    font-weight: 1;
+    font-family: var(--font-logo);
+    font-size: 40px;
+    text-align: center;
+    color: var(--color-bg-dark);
+    margin-bottom: 40px;
+
+}
+
+.artistes__grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.artiste-card {
+    overflow: hidden;
+    width: 300px;
+    height: 440px;
+    border: 2px solid var(--color-primary);
+    position: relative;
+    border-radius: 4px;
+}
+
+.artiste-card--featured {
+    border: 2px solid var(--color-accent);
+}
+
+.artiste-card__tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 0 0 6px 0;
+    z-index: 1;
+}
+
+
+.artiste-card__image {
+    height: 340px;
+    background: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.artiste-card__placeholder {
+    font-size: var(--font-size-sm);
+    color: #999;
+}
+
+
+.artiste-card__body {
+    padding: 10px;
+    text-align: left;
+}
+
+.artist__artist {
+    color: var(--color-text);
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.artist__genre {
+    color: var(--color-primary);
+    font-size: var(--font-size-);
+}
+
+/**
+  Billets - Section de vente de billets
+ 
+  Utilisation :
+  <section class="billets">
+    <h2 class="billets__title">...</h2>
+    <div class="billets__container">
+      <div class="billet__item">
+        <div class="billet"><img /></div>
+        <h3 class="billet__classe">...</h3>
+        <p class="billet__prix">...</p>
+      </div>
+    </div>
+  </section>
+ 
+  Éléments :
+  billets__container : Flex container des billets
+  billet__item       : Wrapper cercle et texte
+ billet             : Cercle foncé avec icône
+ billet__classe     : Nom du type de billet
+  billet__prix       : Prix du billet
+ 
+  Variantes :
+  Aucune
+ */
+
+.billets {
+    background: var(--color-primary);
+    padding: 60px;
+    text-align: center;
+}
+
+.billets__container {
+    display: flex;
+    justify-content: center;
+    gap: 230px;
+    align-items: center;
+}
+
+.billet__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.billet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-dark);
+    border-radius: 100px;
+    width: 140px;
+    height: 140px;
+
+}
+
+
+.billets__title {
+    font-weight: 1;
+    font-family: var(--font-logo);
+    font-size: 40px;
+    text-align: center;
+    color: var(--color-bg-dark);
+    margin-bottom: 40px;
+}
+
+
+.billet h3 {
+    margin: 10px 0 5px;
+}
+
+
+.billet img {
+    width: 100px;
+    height: 100px;
+    font-weight: 500;
+    object-fit: contain;
+}
+
+.billet__prix {
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    text-align: center;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.billet__classe {
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    text-align: center;
+    font-size: 24px
+}
+
+
+
+/**
+ * Partenaires - Section des partenaires
+ 
+  Utilisation :
+  <section class="partenaires">
+    <h2 class="partenaires__title">...</h2>
+    <p class="partenaires__soustitre">...</p>
+    <div class="partenaires__container">
+      <div class="partenaire">
+        <div class="partenaire__circle"><img /></div>
+        <h3 class="partenaire__nom">...</h3>
+      </div>
+    </div>
+  </section>
+ 
+ Éléments :
+  partenaires__title     : Titre de la section
+  partenaires__soustitre : Sous-titre
+  partenaires__container : Flex container
+  partenaire             : Wrapper icône + nom
+ partenaire__circle     : Cercle gris autour de l'icône
+  partenaire__nom        : Nom du partenaire
+ 
+  Variantes :
+  Aucune
+ */
+.partenaires__title {
+    font-weight: 1;
+    font-family: var(--font-logo);
+    font-size: 40px;
+    text-align: center;
+    color: var(--color-bg-dark);
+    margin-bottom: 10px;
+}
+
+.partenaires__soustitre {
+    text-align: center;
+    font-family: var(--font-display);
+    margin-bottom: 10px;
+}
+
+.partenaires__container {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 60px;
+}
+
+.partenaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/**
+ * Témoignages - Section des avis clients
+ 
+ Utilisation :
+ <section class="temoignages">
+    <div class="temoignages__container">
+      <div class="temoignages__left">
+        <h2>...</h2>
+        <p class="temoignages__soustitre">...</p>
+      </div>
+      <div class="temoignages__right">
+        <div class="temoignages-card">
+          <img class="icon" />
+          <div>
+            <strong>...</strong>
+            <p>...</p>
+          </div>
+        </div>
+    </div>
+    </div>
+  </section>
+ 
+ Éléments :
+  temoignages__container : Flex container gauche/droite
+  temoignages__left      : Titre et sous-titre
+  temoignages__soustitre : Sous-titre
+  temoignages__right     : Colonne de cartes
+  temoignages-card       : Carte avec photo et texte
+
+  Variantes :
+  Aucune
+ */
+.partenaire__circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partenaire__circle img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.partenaire__nom {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: center;
+}
+
+/**
+ Contact - Formulaire de contact
+ 
+  Utilisation :
+  <section class="contact">
+    <div class="contact__container">
+      <div class="contact__left">
+        <h2 class="contact__title">...</h2>
+        <p class="contact__soustitre">...</p>
+      </div>
+      <form class="contact__form">
+        <div class="contact__field">
+          <label>...</label>
+          <input />
+       </div>
+        <div class="contact__btns">
+          <button class="contact__annuler">...</button>
+          <button class="contact__envoyer">...</button>
+        </div>
+      </form>
+    </div>
+  </section>
+ 
+  Éléments :
+  contact__container : Flex container gauche/droite
+ contact__left      : Titre et sous-titre
+  contact__title     : Titre de la section
+  contact__soustitre : Sous-titre
+  contact__form      : Formulaire
+  contact__field     : Champ label + input
+ contact__btns      : Conteneur des boutons
+ 
+  Variantes :
+  contact__envoyer : Fond sombre - action principale
+ contact__annuler : Fond gris - action secondaire
+ */
+.temoignages {
+    background: var(--color-primary);
+    padding: 80px 60px;
+
+}
+
+.temoignages__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-direction: row;
+}
+
+.temoignages__left {
+    max-width: 250px;
+    margin-right: 200px;
+}
+
+.temoignages__left h2 {
+    font-weight: 1;
+    color: var(--color-bg-dark);
+    font-family: var(--font-logo);
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.temoignages__soustitre {
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+}
+
+.temoignages__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.temoignages-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f1f1f1;
+    padding: 15px 20px;
+    width: 546px;
+    height: 132px;
+}
+
+
+.temoignages-card strong {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-text);
+}
+
+.temoignages-card p {
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--color-text);
+}
+
+/*contatct*/
+
+.contact {
+    padding: 80px 60px;
+}
+
+.contact__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.contact__left {
+    max-width: 250px;
+}
+
+.contact__title {
+    font-family: var(--font-logo);
+    font-size: 35px;
+    color: var(--color-bg-dark);
+    font-weight: 1;
+    margin-bottom: 10px;
+}
+
+.contact__soustitre {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    width: 500px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 420px;
+}
+
+.contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact__field label {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.contact__field input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: var(--font-size-base);
+}
+
+.contact__btns {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: flex-end;
+}
+
+.contact__envoyer {
+    background: var(--color-bg-dark);
+    color: white;
+    border: none;
+    display: flex;
+    width: 240px;
+    padding: var(--space-sm);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-display);
+    line-height: var(--space-lg);
+    border: 1px;
+    border-radius: var(--space-sm);
+}
+
+.contact__annuler {
+    background: #ddd;
+    color: var(--color-bg-dark);
+    border-radius: var(--space-sm);
+    border: 1px solid var(--color-bg-dark);
+    display: flex;
+    font-size: var(--font-size-base);
+    width: 240px;
+    padding: var(--space-sm);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: var(--space-lg);
+    font-weight: var(--font-display);
+}
+
+
+/*footer*/
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 60px;
+    background-color: var(--color-bg-dark);
+}
+
+.footer__list {
+    list-style: none;
+    display: flex;
+    gap: 300px;
+}
+
+.footer__list a {
+    text-decoration: none;
+    color: var(--color-hero);
+    font-size: var(--font-size-sm);
+}
+
+.footer__btn {
+    margin-left: 170px;
+    background-color: var(--color-accent);
+    color: var(--color-bg-dark);
+    border: none;
+    font-size: var(--font-size-sm);
+    padding: var(--font-size-sm) var(--space-md);
+    display: flex;
+    border-radius: 5px;
+    flex-direction: row;
 }

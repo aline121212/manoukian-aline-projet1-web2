@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <!-- nav bar -->
+    <!-- Section header -->
     <header class="header">
         <div class="header__logo">
-            <img src="Logo.png" alt="LUM.UR">
+            <img src="./assets/Logo.png" alt="LUM.UR">
             <p class="header__soustitre">Lunière Urbaine</p>
         </div>
 
@@ -30,9 +30,9 @@
         <button class="header__btn">Obtenez vos billets </button>
     </header>
 
-    <!-- hero -->
+    <!-- Section hero -->
     <section class="hero">
-        <img class="hero__bg" src="arrière-plan.jpg" alt="arriere-plan couleurs cercels">
+        <img class="hero__bg" src="./assets/arrière-plan.jpg" alt="arriere-plan couleurs cercels">
         <div class="hero__container">
             <h1 class="hero__title">LUMIÈRE.URBAINE</h1>
             <p class="hero__subtitle">3 jours de musique et d'art immersif.</p>
@@ -44,94 +44,297 @@
     </section>
 
 
-
+    <!-- Section programmation -->
     <section class="programmation">
         <h2 class="programmation__title">programmation</h2>
-        <div class="programmation__cards">
+        <div class="programmation__grid">
 
 
-            <!-- carte 1-->
-            <article class="card">
-                <div class="card__image">
-                    <span class="card__tag">Jour 1</span>
-                </div>
-                <div class="card__text">
-                    <h3 class="card__title">Vendredi</h3>
-                    <p class="card__description">Liste des performances du vendredi</p>
-                </div>
-            </article>
 
-            <!-- carte 2 -->
-            <article class="card">
-                <div class="card__image">
-                    <span class="card__tag">Jour 2</span>
+            <article class="prog-card">
+                <span class="prog-card__tag">Jour 1</span>
+                <div class="prog-card__image">
+                    <p class="prog-card__placeholder">Vendredi Festival</p>
                 </div>
-                <div class="card__text">
-                    <h3 class="card__title">Samedi</h3>
-                    <p class="card__description">Liste des performances du samedi</p>
+                <div class="prog-card__content">
+                    <h3>Vendredi</h3>
+                    <p>Liste des performances du vendredi</p>
                 </div>
             </article>
 
 
-
-
-            <!-- carte 3 -->
-            <article class="card">
-                <div class="card__image">
-                    <span class="card__tag">Jour 3</span>
+            <article class="prog-card">
+                <span class="prog-card__tag">Jour 2</span>
+                <div class="prog-card__image">
+                    <p class="prog-card__placeholder">Samedi Festival</p>
                 </div>
-                <div class="card__text">
-                    <h3 class="card__title">Dimanche</h3>
-                    <p class="card__description">Liste des performances du dimanche</p>
-
+                <div class="prog-card__content">
+                    <h3>Samedi</h3>
+                    <p>Liste des performances du samedi</p>
                 </div>
             </article>
 
+
+
+
+
+            <article class="prog-card">
+                <span class="prog-card__tag">Jour 3</span>
+                <div class="prog-card__image">
+                    <p class="prog-card__placeholder">Dimanche Festival</p>
+                </div>
+                <div class="prog-card__content">
+                    <h3>Dimanche</h3>
+                    <p>Liste des performances du dimanche</p>
+                </div>
+            </article>
         </div>
     </section>
 
 
-    <!-- Horaire -->
+
+    <!-- Section horaire -->
     <section class="horaire">
-        <div class="horaire__text">
-            <h2 class="horaire__title">Horaire</h2>
-            <p class="horaire__subtitle">Consultez notre horaire des performances.</p>
+        <div class="horaire__container">
+
+            <div class="horaire__left">
+                <h2>HORAIRE</h2>
+                <p class="horaire__soustitre">Consultez notre horaire des performances.</p>
+            </div>
+
+            <div class="horaire__right">
+
+                <div class="horaire-card">
+                    <img class="icon" src="./assets/calendar_today.png">
+                    <div>
+                        <strong class="horaire__semaine">Vendredi</strong>
+                        <p class="horaire__time">Performances de 15h à 23h</p>
+                    </div>
+                </div>
+
+                <div class="horaire-card">
+                    <img class="icon" src="./assets/calendar_samedi.png">
+                    <div>
+                        <strong class="horaire__semaine">Samedi</strong>
+                        <p class="horaire__time">Performances de 12h à 23h</p>
+                    </div>
+                </div>
+
+                <div class="horaire-card">
+                    <img class="icon" src="./assets/calendar_dimanche.png">
+                    <div>
+                        <strong class="horaire__semaine">Dimanche</strong>
+                        <p class="horaire__time">Performances de 12h à 21h</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-        <div class="horaire__cards">
+    <!-- Section artistes -->
+    <section class="artistes">
+        <h2 class="section-title">Artistes</h2>
+        <div class="artistes__grid">
 
-            <article class="card__horaire">
-                <img src="calendar_today.png" alt="calendar vendredi">
-                <div class="card__horaire__text">
-                    <p class="card__horaire__title">Vendredi</p>
-                    <p class="card__horaire__description">Performances de 15h à 23h</p>
 
+            <div class="artiste-card artiste-card--featured">
+                <span class="artiste-card__tag">En vedette</span>
+                <div class="artiste-card__image">
+                    <p class="artiste-card__placeholder">Artiste 1</p>
                 </div>
-            </article>
-
-            <article class="card__horaire">
-                <img src="calendar_samedi.png" alt="calendar samdei">
-                <div class="card__horaire__text">
-                    <p class="card__horaire__title">Samedi</p>
-                    <p class="card__horaire__description">Performances de 12h à 23h</p>
-
+                <div class="artiste-card__body">
+                    <strong class="artist__artist">Bob l'artiste favori des médias numériques</strong>
+                    <p class="artist__genre">Genre: Pop</p>
                 </div>
-            </article>
+            </div>
 
-
-            <article class="card__horaire">
-                <img src="calendar_dimanche.png" alt="calendar dimanche">
-                <div class="card__horaire__text">
-                    <p class="card__horaire__title">Dimanche</p>
-                    <p class="card__horaire__description">Performances de 12h à 21h</p>
-
+            <!-- Section billets -->
+            <div class="artiste-card">
+                <div class="artiste-card__image">
+                    <p class="artiste-card__placeholder">Artiste 2</p>
                 </div>
-            </article>
+                <div class="artiste-card__body">
+                    <strong class="artist__artist">George l'artiste émergeant très prometteur</strong>
+                    <p class="artist__genre">Genre: Rock</p>
+                </div>
+            </div>
 
+
+            <div class="artiste-card">
+                <div class="artiste-card__image">
+                    <p class="artiste-card__placeholder">Artiste 3</p>
+                </div>
+                <div class="artiste-card__body">
+                    <strong class="artist__artist">Mélo Super Nova</strong>
+                    <p class="artist__genre">Genre: Jazz</p>
+                </div>
+            </div>
+
+            <div class="artiste-card">
+                <div class="artiste-card__image">
+                    <p class="artiste-card__placeholder">Artiste 4</p>
+                </div>
+                <div class="artiste-card__body">
+                    <strong class="artist__artist">Marie la Kid Synthétique</strong>
+                    <p class="artist__genre">Genre: Électro</p>
+                </div>
+            </div>
 
         </div>
     </section>
 
+
+    <!-- Section billets -->
+    <section class="billets">
+        <h2 class="billets__title">BILLETS</h2>
+        <div class="billets__container">
+
+            <div class="billet__item">
+                <div class="billet">
+                    <img src="./assets/carte-jaune.png" alt="billet carte jaune">
+                </div>
+                <h3 class="billet__classe">Standard</h3>
+                <p class="billet__prix">$50</p>
+            </div>
+
+            <div class="billet__item">
+                <div class="billet">
+                    <img src="./assets/billet.png" alt="billet">
+                </div>
+                <h3 class="billet__classe">VIP</h3>
+                <p class="billet__prix">$100</p>
+            </div>
+
+            <div class="billet__item">
+                <div class="billet">
+                    <img src="./assets/etoile.png" alt="etoile jaune">
+                </div>
+                <h3 class="billet__classe">Passeport 3 jours</h3>
+                <p class="billet__prix">$120</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Section partenaires -->
+    <section class="partenaires">
+        <h2 class="partenaires__title">PARTENAIRES</h2>
+        <p class="partenaires__soustitre">Nos précieux partenaires.</p>
+        <div class="partenaires__container">
+
+            <div class="partenaire">
+                <div class="partenaire__circle">
+                    <img src="./assets/stream.png" alt="Partenaire inc." />
+                </div>
+                <h3 class="partenaire__nom">Partenaire inc.</h3>
+            </div>
+
+            <div class="partenaire">
+                <div class="partenaire__circle">
+                    <img src="./assets/gesture.png" alt="Précieux et investit" />
+                </div>
+                <h3 class="partenaire__nom">Précieux et investit</h3>
+            </div>
+
+            <div class="partenaire">
+                <div class="partenaire__circle">
+                    <img src="./assets/insights.png" alt="Une compagnie qui investit" />
+                </div>
+                <h3 class="partenaire__nom">Une compagnie qui investit</h3>
+            </div>
+
+            <div class="partenaire">
+                <div class="partenaire__circle">
+                    <img src="./assets/send.png" alt="Super partenaire" />
+                </div>
+                <h3 class="partenaire__nom">Super partenaire</h3>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Section témoignages -->
+    <section class="temoignages">
+        <div class="temoignages__container">
+
+            <div class="temoignages__left">
+                <h2>TÉMOIGNAGES</h2>
+                <p class="temoignages__soustitre">Ecoutez ce que les gens disent!</p>
+            </div>
+
+            <div class="temoignages__right">
+
+                <div class="temoignages-card">
+                    <img class="icon" src="./assets/person.png">
+                    <div>
+                        <strong>Anne</strong>
+                        <p>Un festival incroyable avec une ambiance électrisante!</p>
+                    </div>
+                </div>
+
+                <div class="temoignages-card">
+                    <img class="icon" src="./assets/person.png">
+                    <div>
+                        <strong>Marco</strong>
+                        <p>Des artistes de haut niveau et une organisation parfaite.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section contact -->
+    <section class="contact">
+        <div class="contact__container">
+
+            <div class="contact__left">
+                <h2 class="contact__title">CONTACT</h2>
+                <p class="contact__soustitre">Nous aimerions avoir de vos nouvelles!</p>
+            </div>
+
+            <form class="contact__form">
+
+                <div class="contact__field">
+                    <label>Nom</label>
+                    <input type="text" placeholder="Entrez votre nom" />
+                </div>
+
+                <div class="contact__field">
+                    <label>Email</label>
+                    <input type="email" placeholder="Entrez votre email" />
+                </div>
+
+                <div class="contact__field">
+                    <label>Message</label>
+                    <input type="text" placeholder="Écrivez votre message ici" />
+                </div>
+
+                <div class="contact__btns">
+                    <button class="contact__annuler">Annuler</button>
+                    <button class="contact__envoyer">Envoyer</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <button class="footer__btn">Obtenez vos billets</button>
+        <nav class="footer__nav">
+            <ul class="footer__list">
+                <li><a href="#">Politique de confidentialité</a></li>
+                <li><a href="#">Conditions d'utilisation</a></li>
+                <li><a href="#">© 2023 Festival Lumière Urbaine</a></li>
+            </ul>
+        </nav>
+    </footer>
 
 
 </body>
