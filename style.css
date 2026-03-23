@@ -268,7 +268,7 @@ body {
     border-radius: var(--space-sm);
 }
 
-/* cates */
+
 
 .card {
     flex-direction: column;
@@ -867,41 +867,39 @@ body {
     text-align: center;
 }
 
-/**
- Contact - Formulaire de contact
+
+
+ /**
+ * Témoignages - Section des avis clients
  
-  Utilisation :
-  <section class="contact">
-    <div class="contact__container">
-      <div class="contact__left">
-        <h2 class="contact__title">...</h2>
-        <p class="contact__soustitre">...</p>
+ Utilisation :
+ <section class="temoignages">
+    <div class="temoignages__container">
+      <div class="temoignages__left">
+        <h2>...</h2>
+        <p class="temoignages__soustitre">...</p>
       </div>
-      <form class="contact__form">
-        <div class="contact__field">
-          <label>...</label>
-          <input />
-       </div>
-        <div class="contact__btns">
-          <button class="contact__annuler">...</button>
-          <button class="contact__envoyer">...</button>
+      <div class="temoignages__right">
+        <div class="temoignages-card">
+          <img class="icon" />
+          <div>
+            <strong>...</strong>
+            <p>...</p>
+          </div>
         </div>
-      </form>
+    </div>
     </div>
   </section>
  
-  Éléments :
-  contact__container : Flex container gauche/droite
- contact__left      : Titre et sous-titre
-  contact__title     : Titre de la section
-  contact__soustitre : Sous-titre
-  contact__form      : Formulaire
-  contact__field     : Champ label + input
- contact__btns      : Conteneur des boutons
- 
+ Éléments :
+  temoignages__container : Flex container gauche/droite
+  temoignages__left      : Titre et sous-titre
+  temoignages__soustitre : Sous-titre
+  temoignages__right     : Colonne de cartes
+  temoignages-card       : Carte avec photo et texte
+
   Variantes :
-  contact__envoyer : Fond sombre - action principale
- contact__annuler : Fond gris - action secondaire
+  Aucune
  */
 .temoignages {
     background: var(--color-primary);
@@ -964,7 +962,42 @@ body {
     color: var(--color-text);
 }
 
-/*contatct*/
+/**
+ Contact - Formulaire de contact
+ 
+  Utilisation :
+  <section class="contact">
+    <div class="contact__container">
+      <div class="contact__left">
+        <h2 class="contact__title">...</h2>
+        <p class="contact__soustitre">...</p>
+      </div>
+      <form class="contact__form">
+        <div class="contact__field">
+          <label>...</label>
+          <input />
+       </div>
+        <div class="contact__btns">
+          <button class="contact__annuler">...</button>
+          <button class="contact__envoyer">...</button>
+        </div>
+      </form>
+    </div>
+  </section>
+ 
+  Éléments :
+  contact__container : Flex container gauche/droite
+ contact__left      : Titre et sous-titre
+  contact__title     : Titre de la section
+  contact__soustitre : Sous-titre
+  contact__form      : Formulaire
+  contact__field     : Champ label + input
+ contact__btns      : Conteneur des boutons
+ 
+  Variantes :
+  contact__envoyer : Fond sombre - action principale
+ contact__annuler : Fond gris - action secondaire
+ */
 
 .contact {
     padding: 80px 60px;
@@ -1061,7 +1094,6 @@ body {
 }
 
 
-/*footer*/
 
 .footer {
     display: flex;
