@@ -1,18 +1,3 @@
-
-
-votre démarche,
-vos choix techniques,
-les défis rencontrés.
-Si applicable, ajouter une section sur l’utilisation de l’IA dans fichier DOCUMENTATION.md :
-quel outil IA,
-quelle version,
-la date,
-le prompt utilisé,
-et quelle partie du code a été validée ou améliorée avec l’IA.
-
-
-# Documentation — Festival Lumière Urbaine
- 
 ## Démarche
  
 J'ai travaillé section par section. J'ai commencé par écrire le HTML de chaque section avant de passer au CSS. Par exemple, j'ai d'abord fait le HTML du 1er section, puis son CSS, et ainsi de suite. Cette méthode m'a bien convenu car elle m'a permis de me concentrer sur une section à la fois.
