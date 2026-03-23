@@ -3,7 +3,7 @@
 J'ai travaillé section par section. J'ai commencé par écrire le HTML de chaque section avant de passer au CSS. Par exemple, j'ai d'abord fait le HTML de la 1er section, puis son CSS, et ainsi de suite. Cette méthode m'a bien convenu car elle m'a permis de me concentrer sur une section à la fois.
 
 ## Choix techniques
-Pour les choix techniques j'ai utiliser les donnés de figma. Pour les catres du section programmation et artices, j'ai utiliser les données similaires.  J'ai aussi fait la même chose pour la section (hoarire et témoignages) et (le footer et la nav bar)
+Pour les choix techniques j'ai utiliser les donnés de figma. Pour les catres du section programmation et artices, j'ai utiliser des données similaires.  J'ai aussi fait la même chose pour la section (hoarire et témoignages) et (le footer et la nav bar)
 
 ## Défis rencontrés
  
